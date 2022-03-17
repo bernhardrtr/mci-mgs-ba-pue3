@@ -20,44 +20,56 @@ MCI Course | Hardware-Related Software Development - Programming Exercise 3
 #### Visual Studio Code
 
 - Download and install [VS Code](https://code.visualstudio.com/download)
+- Install the extensions `Python` + `Pylance`
 
 ##### Extension PyMakr
 
 - Install the extension PyMakr within VS Code.
 - Edit the global settings (`STRG`+`SHIFT`+`P` -> `Pymakr > Global settings`). In `pymakr.json` edit the following lines:
   ```
-  ...
-	"address": "",
-	"username": "",
-	"password": "",
-  ...
-	"autoconnect_comport_manufacturers": [
-		"Pycom",
-		"Pycom Ltd.",
-		"FTDI",
-		"Microsoft",
-		"Microchip Technology, Inc.",
-		"1a86",
-		"Silicon Labs"
-	]
-  ...
+	  ...
+		"address": "",
+		"username": "",
+		"password": "",
+	  ...
+		"autoconnect_comport_manufacturers": [
+			"Pycom",
+			"Pycom Ltd.",
+			"FTDI",
+			"Microsoft",
+			"Microchip Technology, Inc.",
+			"1a86",
+			"Silicon Labs"
+		]
+	  ...
   ```
 
 #### MicroPython Stubs
 
 - Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository next to your MicroPython projects.
   `git clone https://github.com/Josverl/micropython-stubs.git`
-- Add the file `.vscode/settings.json` to your project. This is an ESP32 specific configuration example:
+- Copy the files from the floder `micropython-stubs/docs/samples` to your project root folder.
+- Edit the file `.vscode/settings.json`. This is an ESP32 specific configuration example:
   ```
-  {
-    "python.languageServer": "Pylance",
-    "python.autoComplete.extraPaths": [
-        "../micropython-stubs/stubs/cpython_core-pycopy",
-        "../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
-        "../micropython-stubs/stubs/micropython-v1_18-esp32",
-    ],
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.jediEnabled": false,
-  }
+	{
+	    "python.languageServer": "Pylance",
+	    "python.linting.enabled": true,
+	    "python.linting.pylintEnabled": true,
+	    "python.autoComplete.extraPaths": [
+		"lib",
+		"../micropython-stubs/stubs/cpython_core-pycopy",
+		"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
+		"../micropython-stubs/stubs/micropython-v1_18-esp32",
+	    ],
+	    "python.analysis.extraPaths": [
+		"lib",
+		"../micropython-stubs/stubs/cpython_core-pycopy",
+		"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
+		"../micropython-stubs/stubs/micropython-v1_18-esp32"
+	    ],
+	}
+  ```
+- Edit the line `init-hook=...` in the file `.pylintrc`.
+  ```
+	  init-hook='import sys;sys.path[1:1] = ["lib", "../micropython-stubs/stubs/cpython_core-pycopy", "../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC", "../micropython-stubs/stubs/micropython-v1_18-esp32",];'
   ```
