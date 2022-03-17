@@ -43,11 +43,33 @@ MCI Course | Hardware-Related Software Development - Programming Exercise 3
 		]
 	  ...
   ```
+    - If you want to use a specific port set `"auto_connect": false` and the define the port `"address": "COM4"`.
 
 #### MicroPython Stubs
 
 - Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository next to your MicroPython projects.
   `git clone https://github.com/Josverl/micropython-stubs.git`
+
+## Project Setup
+
+### Python Environment
+
+#### Virtual environment
+
+- Create a new virtual environment for your project.  
+  Open the terminal and type `python -m venv venv`
+- Select the interpreter `STRG`+`SHIFT`+`P` -> `Python: Select Interpreter` from the virtual environment (`./venv/Scripts/python.exe`).
+
+#### Install Requirements
+
+You will need following packages:
+- `esptool`
+
+Open the terminal and activate the environment by typing `venv\Scripts\activate`.
+Install the packages via `pip install $PACKAGE_NAME$`.
+
+#### Link the MicroPython Stubs
+
 - Copy the files from the floder `micropython-stubs/docs/samples` to your project root folder.
 - Edit the file `.vscode/settings.json`. This is an ESP32 specific configuration example:
   ```
@@ -73,3 +95,30 @@ MCI Course | Hardware-Related Software Development - Programming Exercise 3
   ```
 	  init-hook='import sys;sys.path[1:1] = ["lib", "../micropython-stubs/stubs/cpython_core-pycopy", "../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC", "../micropython-stubs/stubs/micropython-v1_18-esp32",];'
   ```
+  
+### Firmware
+
+Download the device firmware from [MicroPython](https://micropython.org/download/) to your project root directory.
+
+### Files and Folder
+
+Add the following files to your project root directory:
+- `boot.py`
+- `main.py`
+
+Add the following folder to your project root directory:
+- `lib` for additional modules.
+
+## Project Deployment
+
+### Flash the Firmware
+
+Open the terminal and activate the environment by typing `venv\Scripts\activate`.
+Download the firmware by following the instructions for your device on [MicroPython](https://micropython.org/download/).
+If you have an ESP32 you can perform following steps:
+1. `esptool --chip esp32 --port $COM-PORT$ erase_flash`
+2. `esptool --chip esp32 --port $COM-PORT$ --baud 460800 write_flash -z 0x1000 esp32-20220117-v1.18.bin`
+
+### Upload Project
+
+Upload your MicroPython project via the Pymakr Upload button or via `STRG`+`SHIFT`+`P` -> `Pymakr > Upload project`
