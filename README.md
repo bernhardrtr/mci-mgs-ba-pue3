@@ -1,5 +1,4 @@
-# mci-mgs-ba-pue3
-MCI Course | Hardware-Related Software Development - Programming Exercise 3
+# MCI Course | Hardware-Related Software Development - Programming Exercise 3
 
 ## Installation
 
@@ -43,7 +42,7 @@ MCI Course | Hardware-Related Software Development - Programming Exercise 3
 		]
 	  ...
   ```
-    - If you want to use a specific port set `"auto_connect": false` and the define the port `"address": "COM4"`.
+    - If you want to use a specific port, set `"auto_connect": false` and then define the port `"address": "COM4"`.
 
 #### MicroPython Stubs
 
@@ -121,4 +120,4 @@ If you have an ESP32 you can perform following steps:
 
 ### Upload Project
 
-Upload your MicroPython project via the Pymakr Upload button or via `STRG`+`SHIFT`+`P` -> `Pymakr > Upload project`
+Upload your MicroPython project via the Pymakr `Upload` button or via `STRG`+`SHIFT`+`P` -> `Pymakr > Upload project`
