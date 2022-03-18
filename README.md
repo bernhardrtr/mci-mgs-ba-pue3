@@ -24,7 +24,8 @@
 ##### Extension PyMakr
 
 - Install the extension PyMakr within VS Code.
-- Edit the global settings (`STRG`+`SHIFT`+`P` -> `Pymakr > Global settings`). In `pymakr.json` edit the following lines:
+- Edit the global settings (`STRG`+`SHIFT`+`P` -> `Pymakr > Global settings`).  
+  In `pymakr.json` edit the following lines:
   ```
 	  ...
 		"address": "",
@@ -42,12 +43,19 @@
 		]
 	  ...
   ```
-    - If you want to use a specific port, set `"auto_connect": false` and then define the port `"address": "COM4"`.
+  If you want to use a specific port, set `"auto_connect": false` and then define the port `"address": "COM4"`.
 
 #### MicroPython Stubs
 
 - Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository next to your MicroPython projects.
   `git clone https://github.com/Josverl/micropython-stubs.git`
+  Example folder structure:
+  ```
+  MyMicroPythonProjects/
+  |-- micropython-stubs/
+  |-- mpy_project_01/
+  |-- mpy_project_02/
+  ```
 
 ## Project Setup
 
@@ -107,6 +115,14 @@ Add the following files to your project root directory:
 
 Add the following folder to your project root directory:
 - `lib` for additional modules.
+
+Example project structure:
+```
+mpy_project_01/
+|-- .vs_code/
+|-- mpy_project_01/
+|-- mpy_project_02/
+```
 
 ## Project Deployment
 
