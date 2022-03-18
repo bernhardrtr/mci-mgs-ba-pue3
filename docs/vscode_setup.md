@@ -25,32 +25,32 @@
 - Edit the global settings (`STRG`+`SHIFT`+`P` -> `Pymakr > Global settings`).
   In `pymakr.json` edit the following lines:
   ```
-	...
-	"address": "",
-	"username": "",
-	"password": "",
-	...
-    "py_ignore": [
-    	"pymakr.conf",
-        ".vscode",
-        ".gitignore",
-        ".git",
-        "project.pymakr",
-        "env",
-        "venv",
-        "micropython-stubs"
-    ],
-	...
-	"autoconnect_comport_manufacturers": [
-		"Pycom",
-		"Pycom Ltd.",
-		"FTDI",
-		"Microsoft",
-		"Microchip Technology, Inc.",
-		"1a86",
-		"Silicon Labs"
-	]
-	...
+  ...
+  "address": "",
+  "username": "",
+  "password": "",
+  ...
+  "py_ignore": [
+      "pymakr.conf",
+      ".vscode",
+      ".gitignore",
+      ".git",
+      "project.pymakr",
+      "env",
+      "venv",
+      "micropython-stubs"
+  ],
+  ...
+  "autoconnect_comport_manufacturers": [
+      "Pycom",
+      "Pycom Ltd.",
+      "FTDI",
+      "Microsoft",
+      "Microchip Technology, Inc.",
+      "1a86",
+      "Silicon Labs"
+  ]
+  ...
   ```
   If you want to use a specific port, set `"auto_connect": false` and then define the port `"address": "COM4"`.
 
@@ -90,24 +90,24 @@ Install the packages via `pip install pylint esptool`.
 - Copy the files from the floder `micropython-stubs/docs/samples` to your project root folder.
 - Edit the file `.vscode/settings.json`. This is an ESP32 specific configuration example:
   ```
-	{
-	    "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
-	    "python.languageServer": "Pylance",
-	    "python.linting.enabled": true,
-	    "python.linting.pylintEnabled": true,
-	    "python.autoComplete.extraPaths": [
-		"lib",
-		"../micropython-stubs/stubs/cpython_core-pycopy",
-		"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
-		"../micropython-stubs/stubs/micropython-v1_18-esp32",
-	    ],
-	    "python.analysis.extraPaths": [
-		"lib",
-		"../micropython-stubs/stubs/cpython_core-pycopy",
-		"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
-		"../micropython-stubs/stubs/micropython-v1_18-esp32"
-	    ],
-	}
+  {
+    "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.autoComplete.extraPaths": [
+	"lib",
+	"../micropython-stubs/stubs/cpython_core-pycopy",
+	"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
+	"../micropython-stubs/stubs/micropython-v1_18-esp32",
+    ],
+    "python.analysis.extraPaths": [
+	"lib",
+	"../micropython-stubs/stubs/cpython_core-pycopy",
+	"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
+	"../micropython-stubs/stubs/micropython-v1_18-esp32"
+    ],
+  }
   ```
 - Edit the line `init-hook=...` in the file `.pylintrc`.
   ```
