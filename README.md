@@ -127,6 +127,7 @@ mpy_project_01/
 |-- lib/
 |-- main.py
 |-- boot.py
+|-- esp32-20220117-v1.18.bin
 ```
 
 ## Project Deployment
