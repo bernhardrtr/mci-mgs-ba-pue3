@@ -6,7 +6,7 @@
 
 #### Python
 
-- Download and install the current [Python](https://www.python.org/downloads/) version.
+- Download and install [Python](https://www.python.org/downloads/). **Node.JS** requires one of the versions 3.7, 3.8, 3.9, 3.10.
 
 #### Node.JS
 
@@ -119,9 +119,14 @@ Add the following folder to your project root directory:
 Example project structure:
 ```
 mpy_project_01/
-|-- .vs_code/
-|-- mpy_project_01/
-|-- mpy_project_02/
+|-- .pylintrc
+|-- .vscode/
+|   |-- settings.json
+|   |-- tasks.json
+|-- venv/
+|-- lib/
+|-- main.py
+|-- boot.py
 ```
 
 ## Project Deployment
