@@ -54,6 +54,10 @@
   ```
   If you want to use a specific port, set `"auto_connect": false` and then define the port `"address": "COM4"`.
 
+### Git 
+
+- If not already installed, install [git](https://git-scm.com/downloads/) on you computer. Otherwise you cannot clone repositories with git. 
+
 ### MicroPython Stubs
 
 - Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository next to your MicroPython projects.
