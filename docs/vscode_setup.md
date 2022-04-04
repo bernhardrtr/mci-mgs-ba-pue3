@@ -134,15 +134,15 @@ Add the following folder to your project root directory:
 Example project structure:
 ```
 mpy_project_01/
-|-- .pylintrc
 |-- .vscode/
 |   |-- settings.json
 |   |-- tasks.json
 |-- venv/
 |-- lib/
-|-- main.py
+|-- .pylintrc
 |-- boot.py
 |-- esp32-20220117-v1.18.bin
+|-- main.py
 ```
 
 ## Project Deployment
