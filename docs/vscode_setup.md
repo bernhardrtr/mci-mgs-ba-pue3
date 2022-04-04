@@ -103,14 +103,14 @@ Install the packages via `pip install pylint esptool`.
 	"lib",
 	"../micropython-stubs/stubs/cpython_core-pycopy",
 	"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
-	"../micropython-stubs/stubs/micropython-v1_18-esp32",
+	"../micropython-stubs/stubs/micropython-v1_18-esp32"
     ],
     "python.analysis.extraPaths": [
 	"lib",
 	"../micropython-stubs/stubs/cpython_core-pycopy",
 	"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
 	"../micropython-stubs/stubs/micropython-v1_18-esp32"
-    ],
+    ]
   }
   ```
 - Edit the line `init-hook=...` in the file `.pylintrc`.
