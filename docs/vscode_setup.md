@@ -17,14 +17,14 @@
 ### Visual Studio Code
 
 - Download and install [VS Code](https://code.visualstudio.com/download)
-- Install the extensions `Python` + `Pylance` (Press Ctrl-Shift-X to get to extension in VS Code, search for the extensions and install them)
+- Install the extensions `Python` + `Pylance` (Press Ctrl+Shift+X to get to extension in VS Code, search for the extensions and install them)
 
 #### Extension PyMakr
 
 As PyMakr is a key extension setting it up correctly is further explained here
 
-- Install the extension PyMakr within VS Code. (Press Ctrl-Shift-X to get to extension in VS Code, search for PyMakr)
-- Edit the global settings (Press Ctrl-Shift-P -> `Pymakr > Global settings`).
+- Install the extension PyMakr within VS Code. (Press Ctrl+Shift+X to get to extension in VS Code, search for PyMakr)
+- Edit the global settings (Press Ctrl+Shift+P -> `Pymakr > Global settings`).
   In `pymakr.json` edit the following lines:
   ```
   ...
@@ -63,8 +63,12 @@ As PyMakr is a key extension setting it up correctly is further explained here
 ### MicroPython Stubs
 
 - Create a folder that contains all your micropython projects in VS Code by following the given steps:
--- Click on File -> Add folder to workspace...
-- Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository next to your MicroPython projects. `git clone https://github.com/Josverl/micropython-stubs.git`
+  - Click on File -> Add folder to workspace...
+  - Within the pop up window click rights and make a new folder
+  - Name the folder as you want, here it is named 'MyMicroPythonProjects'
+  - Click the Add button, so the folder is added to the workspace of VS Code
+- Open a new terminal (Press Ctrl+Shift+ö)
+- Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository into the folder that will contain all your micropython projects with `git clone https://github.com/Josverl/micropython-stubs.git`
   Example folder structure:
   ```
   MyMicroPythonProjects/
