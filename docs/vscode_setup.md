@@ -97,7 +97,7 @@ Since the project folder is now created, the project and the environment of the 
 
 To create a new virtual environment for your project, follow the steps:
 - Open the terminal (Press `Ctrl`+`Shift`+`ö`) 
-- Change the directory to your project folder e.g. by typing 'cd .\mpy_project_01\'
+- Change the directory to your project folder e.g. by typing `cd .\mpy_project_01\`
 - Then type `python -m venv venv` to create the virtual environment
 - Select the interpreter `Ctrl`+`Shift`+`P` -> `Python: Select Interpreter` from the virtual environment (`.\mpy_project_01\venv\Scripts\python.exe`).
 
