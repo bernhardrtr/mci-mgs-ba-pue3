@@ -79,7 +79,7 @@ As PyMakr is a key extension setting it up correctly is further explained here
   |-- ...
   ```
 
-Now we have completed the setup of VS Code to create, develop and test micropython projects within VS Code. It is time to create a micropython project with the given workspace 'MyMicroPythonProjects'
+Now we have completed the setup of VS Code to create, develop and test micropython projects within VS Code. It is time to create a micropython project within the given workspace 'MyMicroPythonProjects'
 
 # Micropython Project Setup
 
