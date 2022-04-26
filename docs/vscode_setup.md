@@ -194,3 +194,6 @@ Follow the steps to get the minimal code example to test if VS Code was set up c
 - Upload your MicroPython project via the Pymakr `Upload` button or via `STRG`+`SHIFT`+`P` -> `Pymakr > Upload project`  
 - Click the Run Button in the PyMakr toolstrip or via `STRG`+`SHIFT`+`P` -> `Pymakr > Run project`
 
+## Get the Template Project
+
+
