@@ -103,16 +103,16 @@ To create a new virtual environment for your project, follow the steps:
 
 ### Install Requirements
 
-You will need following packages:
+You will need the following packages within the virtual environment:
 - `esptool`
 - `pylint`
 
-Open the terminal and activate the environment by typing `venv\Scripts\activate`.
+Open the terminal (Press `Ctrl`+`Shift`+`ö`) and activate the environment by typing `venv\Scripts\activate`.
 Install the packages via `pip install pylint esptool`.
 
 ### Link the MicroPython Stubs
 
-- Copy the files from the floder `micropython-stubs/docs/samples` to your project root folder.
+- Copy the files from the floder `micropython-stubs/docs/samples` to your project root folder (e.g. 'mpy_project_01').
 - Edit the file `.vscode/settings.json`. This is an ESP32 specific configuration example:
   ```
   {
@@ -156,26 +156,54 @@ Example project structure:
 ```
 mpy_project_01/
 |-- .vscode/
+|   |-- extensions.json
 |   |-- settings.json
 |   |-- tasks.json
-|-- venv/
 |-- lib/
+|-- venv/
 |-- .pylintrc
 |-- boot.py
 |-- esp32-20220117-v1.18.bin
 |-- main.py
 ```
 
+The project structure is ready for coding now. You have reached the second of three milestones.
+
 # Project Deployment
 
 ## Flash the Firmware
 
-Open the terminal and activate the environment by typing `venv\Scripts\activate`.
+Open the terminal (Press `Ctrl`+`Shift`+`ö`) and activate the environment by typing `venv\Scripts\activate`.
 Flash the firmware by following the instructions for your device on [MicroPython](https://micropython.org/download/).
 If you have an ESP32 you can perform following steps:
 1. `python -m esptool --chip esp32 --port $COM-PORT$ erase_flash`
 2. `python -m esptool --chip esp32 --port $COM-PORT$ --baud 460800 write_flash -z 0x1000 esp32-20220117-v1.18.bin`
 
-## Upload Project
+## Upload and Run Project
 
-Upload your MicroPython project via the Pymakr `Upload` button or via `STRG`+`SHIFT`+`P` -> `Pymakr > Upload project`
+Follow the steps to get the minimal code example to test if VS Code was set up correctly.
+- Copy this
+  ```
+  {
+    "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.autoComplete.extraPaths": [
+	"lib",
+	"../micropython-stubs/stubs/cpython_core-pycopy",
+	"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
+	"../micropython-stubs/stubs/micropython-v1_18-esp32"
+    ],
+    "python.analysis.extraPaths": [
+	"lib",
+	"../micropython-stubs/stubs/cpython_core-pycopy",
+	"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
+	"../micropython-stubs/stubs/micropython-v1_18-esp32"
+    ]
+  }
+  ```
+  into 'main.py'
+- Upload your MicroPython project via the Pymakr `Upload` button or via `STRG`+`SHIFT`+`P` -> `Pymakr > Upload project`  
+- Click the Run Button in the PyMakr toolstrip or via `STRG`+`SHIFT`+`P` -> `Pymakr > Run project`
+
