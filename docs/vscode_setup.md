@@ -62,6 +62,8 @@ As PyMakr is a key extension setting it up correctly is further explained here
 
 ### MicroPython Stubs
 
+- Create a folder that contains all your micropython projects in VS Code by following the given steps:
+-- Click on File -> Add folder to workspace...
 - Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository next to your MicroPython projects. `git clone https://github.com/Josverl/micropython-stubs.git`
   Example folder structure:
   ```
