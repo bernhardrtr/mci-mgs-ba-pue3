@@ -184,24 +184,11 @@ If you have an ESP32 you can perform following steps:
 Follow the steps to get the minimal code example to test if VS Code was set up correctly.
 - Copy this
   ```
-  {
-    "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
-    "python.languageServer": "Pylance",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.autoComplete.extraPaths": [
-	"lib",
-	"../micropython-stubs/stubs/cpython_core-pycopy",
-	"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
-	"../micropython-stubs/stubs/micropython-v1_18-esp32"
-    ],
-    "python.analysis.extraPaths": [
-	"lib",
-	"../micropython-stubs/stubs/cpython_core-pycopy",
-	"../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC",
-	"../micropython-stubs/stubs/micropython-v1_18-esp32"
-    ]
-  }
+  from time import sleep
+
+  while True:
+    print("Congratulations, you have set up VS Code for Micropython Projects with ESP32 correctly")
+    sleep(1)
   ```
   into 'main.py'
 - Upload your MicroPython project via the Pymakr `Upload` button or via `STRG`+`SHIFT`+`P` -> `Pymakr > Upload project`  
