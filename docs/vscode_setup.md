@@ -76,6 +76,7 @@ As PyMakr is a key extension setting it up correctly is further explained here
   |-- micropython-stubs/
   |-- mpy_project_01/
   |-- mpy_project_02/
+  |-- ...
   ```
 
 ## Project Setup
