@@ -17,12 +17,14 @@
 ### Visual Studio Code
 
 - Download and install [VS Code](https://code.visualstudio.com/download)
-- Install the extensions `Python` + `Pylance`
+- Install the extensions `Python` + `Pylance` (Press Ctrl-Shift-X to get to extension in VS Code, search for the extensions and install them)
 
 #### Extension PyMakr
 
-- Install the extension PyMakr within VS Code.
-- Edit the global settings (`STRG`+`SHIFT`+`P` -> `Pymakr > Global settings`).
+As PyMakr is a key extension setting it up correctly is further explained here
+
+- Install the extension PyMakr within VS Code. (Press Ctrl-Shift-X to get to extension in VS Code, search for pyMakr)
+- Edit the global settings (Press Ctrl-Shift-P -> `Pymakr > Global settings`).
   In `pymakr.json` edit the following lines:
   ```
   ...
@@ -60,8 +62,7 @@
 
 ### MicroPython Stubs
 
-- Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository next to your MicroPython projects.
-  `git clone https://github.com/Josverl/micropython-stubs.git`
+- Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository next to your MicroPython projects. `git clone https://github.com/Josverl/micropython-stubs.git`
   Example folder structure:
   ```
   MyMicroPythonProjects/
