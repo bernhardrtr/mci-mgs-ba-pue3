@@ -17,14 +17,14 @@
 ### Visual Studio Code
 
 - Download and install [VS Code](https://code.visualstudio.com/download)
-- Install the extensions `Python` + `Pylance` (Press Ctrl+Shift+X to get to extension in VS Code, search for the extensions and install them)
+- Install the extensions `Python` + `Pylance` (Press `Ctrl`+`Shift`+`X` to get to extension in VS Code, search for the extensions and install them)
 
 #### Extension PyMakr
 
 As PyMakr is a key extension setting it up correctly is further explained here
 
-- Install the extension PyMakr within VS Code. (Press Ctrl+Shift+X to get to extension in VS Code, search for PyMakr)
-- Edit the global settings (Press Ctrl+Shift+P -> `Pymakr > Global settings`).
+- Install the extension PyMakr within VS Code. (Press `Ctrl`+`Shift`+`X` to get to extension in VS Code, search for PyMakr)
+- Edit the global settings (Press `Ctrl`+`Shift`+`P` -> `Pymakr > Global settings`).
   In `pymakr.json` edit the following lines:
   ```
   ...
@@ -67,8 +67,9 @@ As PyMakr is a key extension setting it up correctly is further explained here
   - Within the pop up window click rights and make a new folder
   - Name the folder as you want, here it is named 'MyMicroPythonProjects'
   - Click the Add button, so the folder 'MyMicroPythonProjects' is added to the workspace of VS Code
-- Open a new terminal (Press Ctrl+Shift+ö)
-- Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository into the folder that will contain all your micropython projects with `git clone https://github.com/Josverl/micropython-stubs.git`
+- Open a new terminal (Press `Ctrl`+`Shift`+`ö`)
+- Clone the [micropython-stubs](https://github.com/Josverl/micropython-stubs) repository into the folder that will contain all your micropython projects with pasting `git clone https://github.com/Josverl/micropython-stubs.git` into the terminal command line and hit the enter key
+
   Example folder structure:
   ```
   MyMicroPythonProjects/
@@ -85,7 +86,7 @@ As PyMakr is a key extension setting it up correctly is further explained here
 
 - Create a new virtual environment for your project.
   Open the terminal and type `python -m venv venv`
-- Select the interpreter `STRG`+`SHIFT`+`P` -> `Python: Select Interpreter` from the virtual environment (`./venv/Scripts/python.exe`).
+- Select the interpreter `Ctrl`+`Shift`+`P` -> `Python: Select Interpreter` from the virtual environment (`./venv/Scripts/python.exe`).
 
 #### Install Requirements
 
