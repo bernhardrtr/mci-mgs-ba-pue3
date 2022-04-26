@@ -79,17 +79,29 @@ As PyMakr is a key extension setting it up correctly is further explained here
   |-- ...
   ```
 
-## Project Setup
+Now we have completed the setup of VS Code to create, develop and test micropython projects within VS Code. It is time to create a micropython project with the given workspace 'MyMicroPythonProjects'
 
-### Python Environment
+# Micropython Project Setup
 
-#### Virtual environment
+As a first step, create a project folder that contains all the files of your project within the 'MyMicroPythonProjects' workspace. Follow the steps to do so:
+- Activate the workspace folder 'MyMicroPythonProjects' with a click on File -> Add folder to workspace... and then choosing the folder 'MyMicroPythonProjects' 
+- Press `Ctrl`+`Shift`+`E` to navigate to the explorer within VS Code
+- Press `Ctrl`+`K` to tell VS Code that a command follows and immediatly press `Ctrl`+`O` afterwards (This is the short cut to create a new folder within the workspace)
+- Name the folder as you would like. Here it is named 'mpy_project_01'
 
-- Create a new virtual environment for your project.
-  Open the terminal and type `python -m venv venv`
-- Select the interpreter `Ctrl`+`Shift`+`P` -> `Python: Select Interpreter` from the virtual environment (`./venv/Scripts/python.exe`).
+## Python Environment
 
-#### Install Requirements
+Since the project folder is now created, the project and the environment of the project have to be set, so a development with micropython is possible. As the needs of a project are highly depending on the projects requirements, it is reasonable to create an environment specifically for every project. Therefore, a virtual environment is part of all our micopython projects. In the next section a virtual environment is created.
+
+### Virtual environment
+
+To create a new virtual environment for your project, follow the steps:
+- Open the terminal (Press `Ctrl`+`Shift`+`ö`) 
+- Change the directory to your project folder e.g. by typing 'cd .\mpy_project_01\'
+- Then type `python -m venv venv` to create the virtual environment
+- Select the interpreter `Ctrl`+`Shift`+`P` -> `Python: Select Interpreter` from the virtual environment (`.\mpy_project_01\venv\Scripts\python.exe`).
+
+### Install Requirements
 
 You will need following packages:
 - `esptool`
@@ -98,7 +110,7 @@ You will need following packages:
 Open the terminal and activate the environment by typing `venv\Scripts\activate`.
 Install the packages via `pip install pylint esptool`.
 
-#### Link the MicroPython Stubs
+### Link the MicroPython Stubs
 
 - Copy the files from the floder `micropython-stubs/docs/samples` to your project root folder.
 - Edit the file `.vscode/settings.json`. This is an ESP32 specific configuration example:
@@ -127,11 +139,11 @@ Install the packages via `pip install pylint esptool`.
 	  init-hook='import sys;sys.path[1:1] = ["lib", "../micropython-stubs/stubs/cpython_core-pycopy", "../micropython-stubs/stubs/micropython-v1_18-frozen/esp32/GENERIC", "../micropython-stubs/stubs/micropython-v1_18-esp32",];'
   ```
 
-### Firmware
+## Firmware
 
 Download the device firmware from [MicroPython](https://micropython.org/download/) to your project root directory.
 
-### Files and Folder
+## Files and Folder
 
 Add the following files to your project root directory:
 - `boot.py`
@@ -154,9 +166,9 @@ mpy_project_01/
 |-- main.py
 ```
 
-## Project Deployment
+# Project Deployment
 
-### Flash the Firmware
+## Flash the Firmware
 
 Open the terminal and activate the environment by typing `venv\Scripts\activate`.
 Flash the firmware by following the instructions for your device on [MicroPython](https://micropython.org/download/).
@@ -164,6 +176,6 @@ If you have an ESP32 you can perform following steps:
 1. `python -m esptool --chip esp32 --port $COM-PORT$ erase_flash`
 2. `python -m esptool --chip esp32 --port $COM-PORT$ --baud 460800 write_flash -z 0x1000 esp32-20220117-v1.18.bin`
 
-### Upload Project
+## Upload Project
 
 Upload your MicroPython project via the Pymakr `Upload` button or via `STRG`+`SHIFT`+`P` -> `Pymakr > Upload project`
