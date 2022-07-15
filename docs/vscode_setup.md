@@ -21,9 +21,10 @@
 
 #### Extension PyMakr
 
-As PyMakr is a key extension setting it up correctly is further explained here
+As PyMakr is a key extension setting it up correctly is further explained here.
 
 - Install the extension PyMakr within VS Code. (Press `Ctrl`+`Shift`+`X` to get to extension in VS Code, search for PyMakr)
+- After installation click on the dropdown menu at the `Uninstall` button and select `Install Another Version...`. Select version **v1.1.18**.
 - Edit the global settings (Press `Ctrl`+`Shift`+`P` -> `Pymakr > Global settings`).
   In `pymakr.json` edit the following lines:
   ```
